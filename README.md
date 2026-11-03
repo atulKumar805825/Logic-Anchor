@@ -1,59 +1,127 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Logic-Anchor Governance
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Logic-Anchor Governance is a clinical AI governance and risk-mitigation platform concept designed to guide healthcare practices through a structured governance diagnostic, review compliance-related questions, view a governance result summary and explore service plans.
 
-## About Laravel
+> **Important notice:** Logic-Anchor Governance provides framework validation and risk mitigation protocols. We are not a law firm. This diagnostic is for governance purposes only and does not constitute legal advice.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Project Overview
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+The platform presents a guided workflow for a healthcare practice to start a governance risk diagnostic, provide practice details, answer a structured questionnaire and review a governance summary. The interface also presents service pricing options for different practice sizes.
 
-## Learning Laravel
+## Frontend Features
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+- Clinical AI governance-focused landing and diagnostic experience.
+- Practice registration form with practice name, practice manager, clinician count and date.
+- Guided multi-step risk / compliance questionnaire.
+- Yes, No and Unknown response options for diagnostic questions.
+- Step progress indicator and compliance percentage display.
+- Governance result summary with practice details and score.
+- Governance gaps / protocol status section.
+- Email capture step with a “Secure Your Anchor” call to action.
+- Pricing comparison for solo practitioners, small practices and larger practices.
+- Responsive interface with a consistent clinical governance visual style.
+- Footer links for legal information, external regulatory resources and contact details.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Governance Diagnostic Workflow
 
-## Laravel Sponsors
+1. **Start diagnostic:** Enter the practice name, authorised practice manager, clinician count and assessment date.
+2. **Complete assessment:** Work through the questionnaire and choose the most appropriate response for each question.
+3. **Review progress:** Follow the step counter and displayed compliance percentage.
+4. **View summary:** Review the practice information, governance score and protocol status shown by the application.
+5. **Continue securely:** Provide an email address through the secure-anchor step where required.
+6. **Review plan options:** Compare the available service tiers and acknowledge the stated governance responsibility before proceeding.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## Backend / Application Workflow
 
-### Premium Partners
+The product workflow represented by the interface can be organised around the following application modules:
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+| Module | Purpose |
+|---|---|
+| Practice records | Capture and maintain practice name, practice manager and clinician count |
+| Diagnostic sessions | Start and manage an assessment for a practice |
+| Questionnaire | Deliver diagnostic questions and record Yes / No / Unknown answers |
+| Assessment progress | Track the current step and completion progress |
+| Governance results | Present the assessment score, protocol status and identified governance gaps |
+| Email capture | Collect the email address associated with the secure-anchor step |
+| Plans and pricing | Display plan tiers and their implementation / monitoring pricing |
+| Consent acknowledgement | Record acknowledgement of the governance responsibility statement before payment progression |
 
-## Contributing
+*This section describes the workflow and modules represented by the supplied screens. Confirm the exact backend implementation and enabled functionality before treating every item as a completed production feature.*
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Pricing Interface
 
-## Code of Conduct
+The supplied pricing screen presents three practice tiers:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- **Solo Practitioner:** displayed implementation fee of $950 plus $99/month.
+- **2–5 Doctors:** displayed implementation fee of $1,950 plus $199/month.
+- **6+ Doctors:** custom quote, with a displayed minimum implementation of $3,500 and monitoring from $399+/month.
 
-## Security Vulnerabilities
+Pricing is shown as it appears in the supplied project screenshots and may be subject to change.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Screenshots
 
-## License
+### Risk diagnostic start
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+![Start risk diagnostic form](screenshots/risk-diagnostic-start.png)
+
+### Compliance questionnaire
+
+![Guided compliance questionnaire](screenshots/compliance-questionnaire.png)
+
+### Governance results dashboard
+
+![Governance results dashboard](screenshots/governance-results-dashboard.png)
+
+### Secure-anchor email step
+
+![Secure your anchor email step](screenshots/secure-anchor-email-step.png)
+
+### Pricing and plan selection
+
+![Pricing and plan selection](screenshots/pricing-and-plan-selection.png)
+
+## Technology Stack
+
+Add the exact technologies and versions used by the implementation before publishing this section. For example, document the actual backend framework, language, database, frontend framework, CSS toolkit, build tooling and any payment or email integrations that are present in the codebase.
+
+Do not list technologies or integrations that are not actually used.
+
+## Local Setup
+
+Setup instructions depend on the actual source code and deployment configuration. Add the verified installation steps for this repository, including:
+
+- Required language and runtime versions.
+- Dependency installation commands.
+- Environment variable setup using a safe example file.
+- Database creation and migration instructions, if applicable.
+- Frontend asset installation and build commands.
+- Local development server command.
+
+Never include real `.env` values, API keys, passwords or production credentials in this README.
+
+## Repository & Confidentiality
+
+If this is a client project, publish only the code, documentation and screenshots that you are authorised to share.
+
+Do not commit:
+
+- `.env` files, credentials, API keys, access tokens or private certificates.
+- Real practice, clinician or patient information.
+- Production database exports, backups or logs.
+- Proprietary assessment logic, confidential scoring rules or private integrations unless approved for publication.
+- Client-owned assets or documents without permission.
+
+A public GitHub repository can be cloned and downloaded. `.gitignore` prevents selected untracked files from being added, but it does not remove files already committed or erase them from Git history. Rotate any exposed credentials and clean repository history before publishing sensitive material.
+
+## Disclaimer
+
+Logic-Anchor Governance provides framework validation and risk mitigation protocols. We are not a law firm. This diagnostic is for governance purposes only and does not constitute legal advice. The screenshots and feature descriptions are for project demonstration purposes and should not be interpreted as a guarantee of regulatory compliance or clinical safety.
+
+## Live Project
+
+- Website: `https://YOUR-LIVE-DOMAIN.com`
+- GitHub: `https://github.com/YOUR-USERNAME/YOUR-REPOSITORY`
+
+Replace these placeholders with approved public links before publishing.
